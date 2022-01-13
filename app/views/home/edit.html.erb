@@ -11,10 +11,21 @@
         <%= render 'shared/edit_section', title: "Profile details" do %>
             <%= f.text_field :name, value: @profile.name || current_user.name, placeholder: "Name" %><br/>
             <div class="flex items-center my-4">
-                <%= image_tag gravatar_url_for(current_user), 
-                    id: "image-preview", style:"max-width:200px"
-                %>
+
+                <% if @profile.image.attached? %>
+                    <%= image_tag @profile.image, style: "max-width:200px display block" %>
+                <% end %>
+                <br />
+                <label class = "flex-shrink-0 px-4 py-2 text-base font-semibold text-white bg-blue-500 rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-green-200">
+                Upload new image
+                <span style="display:none;">
+                <%= f.file_field :image %>
+                </span>
+                </label>
+
+                
             </div>
+
             <%= f.text_field :job_title, value: @profile.job_title, placeholder: "Job title" %><br/>
             <%= f.text_field :total_experience, value: @profile.total_experience, placeholder: "Total experience" %><br/>
             <%= f.text_area :overview, value: @profile.overview, placeholder: "Profile overview", required: true %><br/>

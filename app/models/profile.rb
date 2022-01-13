@@ -6,6 +6,8 @@ class Profile < ApplicationRecord
  
     belongs_to :user
 
+    has_one_attached :image
+
     def reject_education_create(education)
         education[:degree].blank? or education[:school].blank? or education[:start].blank? or education[:end].blank?
     end

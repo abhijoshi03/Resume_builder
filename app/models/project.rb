@@ -1,4 +1,5 @@
 class Project < ApplicationRecord
-	belongs_to :experience
 	has_one(:experience, dependent: :destroy)
+	belongs_to :experience
+
 end

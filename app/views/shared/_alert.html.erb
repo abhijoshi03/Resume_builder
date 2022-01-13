@@ -7,6 +7,15 @@
             <%= message %>
         </p>
     </div>
+<% elsif type == "info" %>
+    <div class="bg-blue-200 border-blue-600 text-blue-600 border-l-4 p-4" role="alert">
+        <p class="font-bold">
+            Info
+        </p>
+        <p>
+            <%= message %>
+        </p>
+    </div>
 <% else %>
     <div class="bg-red-200 border-red-600 text-red-600 border-l-4 p-4" role="alert">
         <p class="font-bold">
