@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2022_01_12_214617) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "profile_id"
+    t.bigint "profile_id"
     t.index ["profile_id"], name: "index_experiences_on_profile_id"
   end
 
@@ -73,5 +73,6 @@ ActiveRecord::Schema.define(version: 2022_01_12_214617) do
   end
 
   add_foreign_key "educations", "profiles"
+  add_foreign_key "experiences", "profiles"
   add_foreign_key "profiles", "users"
 end

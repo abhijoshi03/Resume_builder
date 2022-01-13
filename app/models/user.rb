@@ -9,7 +9,7 @@ class User < ApplicationRecord
     validates(:password, presence: true, length: { minimum: 8 })
 
     # adds password fields
-    has_secure_password
+    has_secure_password 
 
     has_one :profile, dependent: :destroy
 end
