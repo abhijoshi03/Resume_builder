@@ -26,14 +26,22 @@ Did a late deployment and remote app is not working as expected. need some more 
 
 ## Project Timeline
 
-10th January: Understanding Ruby syntax and semantics
-|
-11th January: Understanding Rails MVC architecture and examples
-|
-12th January: Hands-on demo implematiations and exploring the codebase
-|
-13th January: Signup feature, experiences table, image upload implementation and exploring associations
-|
+10th January: Understanding Ruby syntax and semantics    
+
+|    
+
+11th January: Understanding Rails MVC architecture and examples    
+
+|    
+
+12th January: Hands-on demo implematiations and exploring the codebase    
+
+|    
+
+13th January: Signup feature, experiences table, image upload implementation and exploring associations    
+
+|    
+
 14th January: working with projects table, debugging active storage, deployment
 
 
