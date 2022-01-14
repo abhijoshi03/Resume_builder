@@ -48,8 +48,7 @@
             <%= f.fields_for :experience do |experience| %>
                 <%= render 'shared/input/experience', experience: experience %>
             <%end%><br />
-            <%= render 'shared/input/buttons/add', label: "+ Add Experience", path: "/experiences/new" %>
-            
+            <%= render 'shared/input/buttons/add', label: "+ Add Experience", path: "/experiences/new" %>  
             
         <% end %>
 

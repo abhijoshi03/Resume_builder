@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 2022_01_13_194258) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "profile_id"
+    t.bigint "profile_id"
     t.index ["profile_id"], name: "index_experiences_on_profile_id"
   end
 
@@ -84,12 +84,12 @@ ActiveRecord::Schema.define(version: 2022_01_13_194258) do
   create_table "projects", force: :cascade do |t|
     t.string "title"
     t.string "project_url"
-    t.string "tech_stack_string"
+    t.string "tech_stack"
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "experience_id"
-    t.index ["experience_id"], name: "index_projects_on_experience_id"
+    t.bigint "profile_id"
+    t.index ["profile_id"], name: "index_projects_on_profile_id"
   end
 
   create_table "users", force: :cascade do |t|
