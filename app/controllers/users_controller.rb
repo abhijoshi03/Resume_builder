@@ -6,8 +6,7 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		user = User.new(name: params[:session][:name],email: params[:session][:email],
-			password: params[:session][:password],password_confirmation: params[:session][:password_confirmation])
+		user = User.new(name: params[:session][:name],email: params[:session][:email],password: params[:session][:password],password_confirmation: params[:session][:password_confirmation])
 		if user.save
 			
             flash.now[:success] = 'Registration successful'
@@ -16,19 +15,13 @@ class UsersController < ApplicationController
 			user.profile.educations.create
 
 		else
-			flash[:error] = "Cannot create an user"
+			flash[:danger] = "Cannot create an user"
 			render 'new'
 		end
 	end
 
-# private 
 
-# 	def user_params
-# 		params.permit(:session[:name,:email,:password,:password_confirmation])
-# 		params.inspect
-# 	end
 end
 
 
-# params.permit(params[:session][:name],params[:session][:email],params[:session][:password],params[:session][:password_confirmation])
-# 		params.inspect
+ 

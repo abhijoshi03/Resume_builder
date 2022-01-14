@@ -5,7 +5,6 @@ class ExperiencesController < ApplicationController
         current_user.profile.experience.create
         flash[:success] = "Experience added."
         redirect_to edit_url
-        experience.inspect
     end
 
 end
